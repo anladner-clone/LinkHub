@@ -1,46 +1,86 @@
-# Astro Starter Kit: Basics
+# Ariel Ladner - LinkHub
 
-```sh
-npm create astro@latest -- --template basics
-```
+Este es un proyecto personal construido con **Astro**, diseñado para mostrar mis links y contenido de forma moderna y responsive, especialmente optimizado para **mobile**.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## 👨‍💻 Sobre mí
 
-Inside of your Astro project, you'll see the following folders and files:
+Hola, soy **Ariel Ladner**, desarrollador de software y creador de contenido tech.  
+Me especializo en desarrollo **Frontend**, automatización y contenido educativo en programación.  
+Me gusta crear interfaces limpias, minimalistas y funcionales.
+
+- 💻 Desarrollo web con **Astro, React, HTML, CSS y JS**.  
+- 📹 Creador de contenido: tutoriales de programación y tips.  
+
+---
+
+## 🚀 Estructura del Proyecto
+
+El proyecto está organizado en componentes **Atom → Molecule → Organism → Template**, reutilización de componentes:
 
 ```text
 /
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+├── public/                     # Assets públicos (imagenes, iconos, etc.)
+├── src/
+│   ├── assets/                 # Imágenes, logos, avatares
+│   ├── components/
+│   │   ├── atoms/              # Componentes atómicos (Icon, Button, SliderItem, SectionTitle)
+│   │   ├── molecules/          # Combinaciones de atoms (VideoCard, LinkCard)
+│   │   └── organisms/          # Secciones completas (ProfileSection, Footer, LinksStack)
+│   ├── layouts/                # Templates y layouts
+│   └── pages/                  # Páginas principales (index.astro, 404.astro)
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+---
 
-## 🧞 Commands
+## 🛠 Tecnologías usadas
 
-All commands are run from the root of the project, from a terminal:
+* **[Astro](https://astro.build/)** - Framework principal.
+* **[TailwindCSS](https://tailwindcss.com/)** - Estilos y theming.
+* **Material Icons** - Para todos los iconos en la UI.
+* **Responsive design** - Mobile-first con breakpoints para desktop y tablets.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## ⚡ Instalación y comandos
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Clona el proyecto y corre localmente:
+
+```sh
+git clone https://github.com/anladner-clone/mi-astro-portfolio.git
+cd mi-astro-portfolio
+npm install
+npm run dev
+```
+
+| Comando           | Acción                                         |
+| :---------------- | :--------------------------------------------- |
+| `npm install`     | Instala las dependencias del proyecto          |
+| `npm run dev`     | Levanta el servidor de desarrollo en localhost |
+| `npm run build`   | Compila el sitio a producción en `./dist/`     |
+| `npm run preview` | Previsualiza la build localmente               |
+
+---
+
+## 🌐 Links
+
+* YouTube: [SoyNico_dev](https://www.youtube.com/@SoyNico_dev)
+* TikTok: [@soynico.edu](https://www.tiktok.com/@soynico.edu)
+* Instagram: [ladner._.ariel](https://www.instagram.com/ladner._.ariel)
+* GitHub: [anladner-clone](https://github.com/anladner-clone)
+
+---
+
+## 👀 Próximamente
+
+* Blog personal
+* Documentación de proyectos
+* Tienda de cursos y recursos
+
+---
+
+## ❤️ Créditos
+
+Hecho con ♥ en **Astro** por **Ariel Ladner**.
