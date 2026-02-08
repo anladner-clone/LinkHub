@@ -1,13 +1,42 @@
 ---
 import "@styles/global.css";
-const { title = "Nico Dev" } = Astro.props;
+const {
+	title = "Nico Dev | Link Hub",
+	description = "Tutoriales de programación y contenido tecnológico. Aprende a programar con Nico.",
+	url = "https://www.ladner-ariel.vercel.app",
+	image = "https://www.ladner-ariel.vercel.app/og-image.png",
+} = Astro.props;
 ---
 
-<html lang="en" class="dark">
+<html lang="es" class="dark">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta
+			name="keywords"
+			content="programación, tutoriales, desarrollo web, JavaScript, Python, React, Astro, tecnología"
+		/>
+		<meta name="author" content="Ariel Ladner" />
+
+		<meta name="robots" content="index, follow" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={url} />
+		<meta property="og:image" content={image} />
+		<meta property="og:site_name" content="Nico Dev | Link Hub" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={image} />
+		<meta name="twitter:site" content="@_Ariel_Ladner_" />
+
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
 		<link
 			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -17,6 +46,8 @@ const { title = "Nico Dev" } = Astro.props;
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
 			rel="stylesheet"
 		/>
+
+		<link rel="canonical" href={url} />
 	</head>
 
 	<body class="bg-background-dark font-display">
