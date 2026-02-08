@@ -49,8 +49,8 @@ El proyecto está organizado en componentes **Atom → Molecule → Organism →
 Clona el proyecto y corre localmente:
 
 ```sh
-git clone https://github.com/anladner-clone/mi-astro-portfolio.git
-cd mi-astro-portfolio
+git clone https://github.com/anladner-clone/LinkHub.git
+cd LinkHub
 npm install
 npm run dev
 ```
