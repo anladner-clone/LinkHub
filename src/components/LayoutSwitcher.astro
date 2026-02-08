@@ -1,0 +1,12 @@
+---
+import MobileLayout from "@components/templates/MobileTemplate.astro";
+import DesktopLayout from "@components/templates/DesktopTemplate.astro";
+---
+
+<div class="block md:hidden">
+    <MobileLayout />
+</div>
+
+<div class="hidden md:block">
+    <DesktopLayout />
+</div>

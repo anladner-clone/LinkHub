@@ -1,0 +1,9 @@
+---
+import LinkItem from "@components/molecules/LinkItem.astro";
+
+const { links } = Astro.props;
+---
+
+<div class="flex flex-col gap-3 w-full">
+    {links.map((link: any) => <LinkItem {...link} />)}
+</div>

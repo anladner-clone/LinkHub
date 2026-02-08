@@ -1,0 +1,16 @@
+---
+import Avatar from "@components/atoms/Avatar.astro";
+import ProfileInfo from "@components/molecules/ProfileInfo.astro";
+
+const { avatar, name, bio } = Astro.props;
+---
+
+<div class="flex flex-col items-center gap-4">
+    <div class="relative group">
+        <div class="absolute -inset-1 rounded-full blur opacity-75 bg-primary">
+        </div>
+        <Avatar src={avatar} alt={name} />
+    </div>
+
+    <ProfileInfo name={name} bio={bio} />
+</div>

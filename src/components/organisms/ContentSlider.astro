@@ -1,0 +1,27 @@
+---
+import SectionTitle from "@components/atoms/SectionTitle.astro";
+import SliderContainer from "@components/atoms/SliderContainer.astro";
+import SliderItem from "@components/atoms/SliderItem.astro";
+import VideoCard from "@components/molecules/VideoCard.astro";
+
+const { title, items, platform } = Astro.props;
+---
+
+<section class="w-full mt-8">
+    <SectionTitle title={title} />
+
+    <SliderContainer>
+        {
+            items.map((item: { thumbnail: string; title: string; href: string }) => (
+                <SliderItem>
+                    <VideoCard
+                        thumbnail={item.thumbnail}
+                        title={item.title}
+                        href={item.href}
+                        platform={platform}
+                    />
+                </SliderItem>
+            ))
+        }
+    </SliderContainer>
+</section>

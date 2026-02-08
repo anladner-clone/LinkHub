@@ -1,0 +1,109 @@
+---
+import ProfileSection from "@components/organisms/ProfileSection.astro";
+import LinksStack from "@components/organisms/LinksStack.astro";
+import ContentSlider from "@components/organisms/ContentSlider.astro";
+import Footer from "@components/organisms/Footer.astro";
+
+const links = [
+    {
+        title: "YouTube",
+        description: "Tutoriales de programación y contenido tech",
+        icon: "play_circle",
+        href: "https://www.youtube.com/@SoyNico_dev",
+    },
+    {
+        title: "TikTok",
+        description: "Tips rápidos de programación y tecnología",
+        icon: "videocam",
+        href: "https://www.tiktok.com/@soynico.edu",
+    },
+    {
+        title: "Instagram",
+        description: "Contenido personal y mi camino en tecnología",
+        icon: "photo_camera",
+        href: "https://www.instagram.com/ladner._.ariel",
+    },
+    {
+        title: "GitHub",
+        description: "Proyectos, código y trabajo open source",
+        icon: "code",
+        href: "https://github.com/anladner-clone",
+    },
+    {
+        title: "LinkedIn",
+        description: "Conectemos y compartamos proyectos",
+        icon: "work",
+        href: "https://www.linkedin.com/in/anladner/",
+    },
+];
+
+const youtubeVideos = [
+    {
+        title: "¿Qué es SQL?",
+        thumbnail: "/images/miniatura_1.jpg",
+        href: "https://youtu.be/Xq3gqqQLiro?si=Y4Lp9BQMyCbwT17v",
+    },
+    {
+        title: "Primer juego en Python",
+        thumbnail: "/images/miniatura_2.jpg",
+        href: "https://youtu.be/GPyFc0X9LJw?si=Kp8XL6i2VUXTHO_-",
+    },
+    {
+        title: "Automatizando tareas con Python",
+        thumbnail: "/images/miniatura_3.jpg",
+        href: "https://youtu.be/m4pU3JXSQjE?si=noDbsuqmunYPAA44",
+    },
+    {
+        title: "Instalando Python",
+        thumbnail: "/images/miniatura_4.jpg",
+        href: "https://youtu.be/5Dq-QvAH1nA?si=sLWaBUDxwmZj_niL",
+    },
+];
+
+const links_secondary = [
+    {
+        title: "Blog",
+        description: "Próximamente",
+        icon: "article",
+        href: "/blog/",
+        target: "_self",
+    },
+    {
+        title: "Docs",
+        description: "Próximamente",
+        icon: "menu_book",
+        href: "/docs/",
+        target: "_self",
+    },
+    {
+        title: "Tienda",
+        description: "Próximamente",
+        icon: "shopping_cart",
+        href: "/tienda/",
+        target: "_self",
+    },
+];
+
+---
+
+<div
+    class="relative w-full max-w-[400px] mx-auto mt-6 flex flex-col gap-6 px-4"
+>
+    <ProfileSection
+        avatar="/avatar.jpg"
+        name="Ariel Ladner"
+        bio="Desarrollo software y creo contenido sobre tecnología."
+    />
+
+    <LinksStack links={links} />
+
+    <ContentSlider
+        title="Últimos videos en YouTube"
+        items={youtubeVideos}
+        platform="YouTube"
+    />
+
+    <LinksStack links={links_secondary} />
+
+    <Footer />
+</div>

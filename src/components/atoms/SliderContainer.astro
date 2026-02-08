@@ -1,0 +1,48 @@
+---
+const sliderId = `slider-${Math.random().toString(36).slice(2)}`;
+---
+
+<div class="w-full flex flex-col gap-3">
+    <div class="relative">
+        <div
+            id={sliderId}
+            class="flex gap-4 overflow-x-auto pb-2 no-scrollbar snap-x snap-mandatory scroll-smooth px-5"
+        >
+            <slot />
+        </div>
+    </div>
+
+    <div class="hidden md:flex justify-center">
+        <div
+            class="flex items-center gap-2 bg-[#161e2c] border border-slate-800 rounded-full p-1 shadow-lg"
+        >
+            <button
+                class="w-8 h-8 flex items-center justify-center rounded-full text-slate-300 hover:text-white hover:bg-primary/20 transition"
+                onclick={`document.getElementById('${sliderId}').scrollBy({ left: -320, behavior: 'smooth' })`}
+            >
+                <span class="material-symbols-outlined text-[20px]">
+                    chevron_left
+                </span>
+            </button>
+
+            <button
+                class="w-8 h-8 flex items-center justify-center rounded-full text-slate-300 hover:text-white hover:bg-primary/20 transition"
+                onclick={`document.getElementById('${sliderId}').scrollBy({ left: 320, behavior: 'smooth' })`}
+            >
+                <span class="material-symbols-outlined text-[20px]">
+                    chevron_right
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .scrollbar-none::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-none {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>

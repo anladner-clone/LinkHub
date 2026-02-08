@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0d7ff2;
+  --color-background-light: #f5f7f8;
+  --color-background-dark: #0b1120;
+  --color-card-dark: #111827;
+
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+@utility bg-dot-pattern {
+  background-image: radial-gradient(circle, #1f2937 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 15px -3px rgba(13, 127, 242, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 25px -3px rgba(13, 127, 242, 0.6);
+    }
+}
+
+.neon-glow {
+    animation: pulse-glow 3s infinite;
+}

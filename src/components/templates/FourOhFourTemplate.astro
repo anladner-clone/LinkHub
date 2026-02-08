@@ -1,0 +1,46 @@
+---
+import ProfileSection from "@components/organisms/ProfileSection.astro";
+import Icon from "@components/atoms/Icon.astro";
+import Footer from "@components/organisms/Footer.astro";
+---
+
+<div
+    class="relative w-full max-w-[400px] mx-auto mt-6 flex flex-col gap-2 px-4 text-center"
+>
+    <ProfileSection
+        avatar="/avatar.jpg"
+        name="Ariel Ladner"
+        bio=" "
+    />
+
+    <h1
+        class="text-[6rem] font-bold text-transparent bg-clip-text bg-linear-to-r from-primary to-sky-400"
+    >
+        404
+    </h1>
+
+    <p class="text-white text-xl font-semibold">
+        Ups… ¡Esta página no existe!
+    </p>
+
+    <p class="text-slate-400 text-sm">
+        Probablemente te equivocaste de link o esta sección está en
+        construcción.
+    </p>
+
+    <a
+        href="/"
+        class="mt-6 inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary rounded-xl text-white font-semibold hover:bg-primary/80 transition"
+    >
+        <Icon name="arrow_back" />
+        Volver al inicio
+    </a>
+
+    <div class="mt-8 flex justify-center gap-4 text-slate-500">
+        <Icon name="sentiment_very_dissatisfied" size={36} />
+        <Icon name="help_outline" size={36} />
+        <Icon name="error_outline" size={36} />
+    </div>
+
+    <Footer />
+</div>

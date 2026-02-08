@@ -1,0 +1,33 @@
+---
+import Icon from "@components/atoms/Icon.astro";
+
+const { title, description, icon, href, target = "_blank" } = Astro.props;
+---
+
+<a
+    href={href}
+    target={target}
+    rel={target === "_blank" ? "noopener noreferrer" : undefined}
+    class="group relative flex items-center justify-between p-4 bg-[#161e2c] border border-slate-800 hover:border-primary/50 rounded-2xl transition-all duration-300 hover:bg-[#1c2636] hover:-translate-y-1"
+>
+    <div class="flex items-center gap-4">
+        <div
+            class="flex items-center justify-center w-10 h-10 sm:w-13 sm:h-13 rounded-xl bg-[#283039] group-hover:bg-primary/20 text-white group-hover:text-primary transition-colors"
+        >
+            <Icon name={icon} />
+        </div>
+
+        <div class="flex flex-col min-w-0">
+            <span class="text-white font-bold text-sm sm:text-base">{title}</span>
+            <span class="text-slate-500 text-[11px] sm:text-xs line-clamp-2">
+                {description}
+            </span>
+        </div>
+    </div>
+
+    <div
+        class="w-8 h-8 flex items-center justify-center rounded-full bg-[#1e293b] group-hover:bg-primary text-slate-400 group-hover:text-white"
+    >
+        <Icon name="arrow_forward" size={18} />
+    </div>
+</a>
